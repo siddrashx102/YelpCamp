@@ -117,6 +117,6 @@ app.use((err, req, res, next) => {
     res.status(status).render("error", { err });
 })
 
-app.listen(3000, () => {
-    console.log(`YelpCamp v9.0 server listening on port 3000...`);
-});
+// Export the configured Express app so it can be used
+// both by a local server (server.js) and by Vercel.
+module.exports = app;
